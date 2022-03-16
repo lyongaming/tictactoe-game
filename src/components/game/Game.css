@@ -18,3 +18,36 @@
     align-items: center;
     justify-content: space-around;
 }
+
+.game__player-h2 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.game__player-picture {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.emoji {
+    width: 80%;
+}
+
+.game__player-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+
+.game__player-p {
+    font-size: 1.5rem;
+}
+
+.game__player-number-score {
+    font-size: 4rem;
+}
