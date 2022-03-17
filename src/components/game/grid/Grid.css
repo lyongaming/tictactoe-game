@@ -1,8 +1,8 @@
 .game__grid {
-    width: 100%;
+    width: 50%;
     height: 100%;
     border-radius: 20px;
-    text-align: center;
+    padding: 10px;
 }
 
 .game__grid-table {
@@ -19,10 +19,6 @@
     width: 33.33333%;
 }
 
-.button-sel {
-    display: block;
-}
-
 .button-select {
     height: 90%;
     width: 90%;
@@ -32,4 +28,8 @@
     cursor: pointer;
     display: none;
     font-size: 4.5rem;
+}
+
+.button-sel {
+    display: block;
 }
