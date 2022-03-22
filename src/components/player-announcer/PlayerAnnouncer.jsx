@@ -3,7 +3,14 @@ import React from 'react'
 import "./PlayerAnnouncer.css";
 import "../buttons/Buttons.css";
 
+import { Button } from '../buttons/Button';
+
+import toggleModal from "../../helpers/toggleModal"
+
 export const PlayerAnnouncer = () => {
+
+  const beginGame = () => toggleModal("0", "hidden");
+
   return (
     <div className="modal-container">
       <div className="modal modal-close">
@@ -11,7 +18,7 @@ export const PlayerAnnouncer = () => {
         <div className="modal-text">
           <h1 id="playerInit">Start Player 1</h1>
         </div>
-        <button className="button_start start_button" type="button">Begin</button>
+        <Button id="start_button" click={ beginGame }>Begin</Button>
       </div>
     </div>
   )
