@@ -7,6 +7,7 @@ import "./Game.css";
 export const Game = (players) => {
   return (
     <section className="game__section">
+      <Player id="img_player1">Player 1</Player>
 
       <Grid />
 
