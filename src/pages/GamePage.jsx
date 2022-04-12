@@ -19,7 +19,7 @@ export const GamePage = () => {
     <>
         <Game players={ players } turn={ turn } />
 
-        <PlayerAnnouncer />
+        <PlayerAnnouncer turn={ turn } />
 
         <Buttons players={ players } setPlayers={ setPlayers } turn={ turn } setTurn={ setTurn } />
     </>
