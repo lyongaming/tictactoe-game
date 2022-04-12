@@ -1,17 +1,25 @@
-import React from 'react';
+import React from "react";
 
 import { Player } from "./player/Player";
 import { Grid } from "./grid/Grid";
 import "./Game.css";
 
-export const Game = () => {
+export const Game = ({ players, turn }) => {
+  const playersArr = players.map((player) => (
+    <Player key={player.name} img={player.img} score={player.score} turn={ turn } >
+      {player.name}
+    </Player>
+  ));
+
   return (
     <section className="game__section">
-      <Player id="img_player1">Player 1</Player>
 
-      <Grid />
+      { playersArr[0] }
 
-      <Player id="img_player2">Player 2</Player>
+      <Grid turn={ turn } />
+
+      { playersArr[1] }
+
     </section>
-  )
-}
+  );
+};
