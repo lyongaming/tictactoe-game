@@ -44,8 +44,16 @@
     font-size: 4rem;
 }
 
+.turn h2 {
+    font-size: 30px;
+}
+
 .turn img {
     width: 120%;
+}
+
+.not_turn h2 {
+    font-size: 14px;
 }
 
 .not_turn img {
