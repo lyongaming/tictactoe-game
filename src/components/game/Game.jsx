@@ -4,10 +4,9 @@ import { Player } from "./player/Player";
 import { Grid } from "./grid/Grid";
 import "./Game.css";
 
-export const Game = () => {
+export const Game = (players) => {
   return (
     <section className="game__section">
-      <Player id="img_player1">Player 1</Player>
 
       <Grid />
 
