@@ -43,3 +43,11 @@
 .game__player-number-score {
     font-size: 4rem;
 }
+
+.turn img {
+    width: 120%;
+}
+
+.not_turn img {
+    width: 80%;
+}

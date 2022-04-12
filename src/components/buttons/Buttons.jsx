@@ -7,13 +7,28 @@ import toggleModal from "../../helpers/toggleModal";
 
 export const Buttons = () => {
 
-  const showModal = () => toggleModal("1", "visible");
+  const drawGame = () => {
+    // Determina the turn
+    // Set style changes accordingly
+    // Show modal
+    const img_player1 = document.getElementById("img_player1");
+    img_player1.src = "./images/play.png";
+    img_player1.style.width = "120%";
+
+    const img_player2 = document.getElementById("img_player2");
+    img_player2.src = "./images/wait.png";
+    img_player2.style.width = "80%";
+
+    document.getElementById("player1_title").style.fontSize = "30px";
+
+    toggleModal("1", "visible");
+  }
 
   const buttons = [
   {
     text: "Draw game",
     id: "ranGame",
-    click_function: showModal
+    click_function: drawGame
   },
   {
     text: "Next game",

@@ -7,11 +7,11 @@ import "./Game.css";
 export const Game = () => {
   return (
     <section className="game__section">
-      <Player>Player 1</Player>
+      <Player id="img_player1">Player 1</Player>
 
       <Grid />
 
-      <Player>Player 2</Player>
+      <Player id="img_player2">Player 2</Player>
     </section>
   )
 }
