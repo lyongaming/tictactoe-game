@@ -33,7 +33,8 @@ export const Buttons = ({ players, setPlayers, turn, setTurn }) => {
   {
     text: "Draw game",
     id: "ranGame",
-    click_function: drawGame
+    click_function: drawGame,
+    active: turn ? false : true
   },
   {
     text: "Next game",
@@ -45,7 +46,7 @@ export const Buttons = ({ players, setPlayers, turn, setTurn }) => {
     text: "Restart",
     id: "cleanButton",
     click_function: () => {},
-    active: false
+    active: turn ? true : false
   }
 ];
 
