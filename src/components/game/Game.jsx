@@ -16,7 +16,7 @@ export const Game = ({ players, turn }) => {
 
       { playersArr[0] }
 
-      <Grid />
+      <Grid turn={ turn } />
 
       { playersArr[1] }
 

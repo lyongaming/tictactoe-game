@@ -3,13 +3,13 @@ import React from 'react';
 import { GridRow } from './GridRow';
 import "./Grid.css";
 
-export const Grid = () => {
+export const Grid = ({ turn }) => {
   return (
     <main className="game__grid">
       <table className="game__grid-table">
-        <GridRow />
-        <GridRow />
-        <GridRow />
+        <GridRow turn={ turn } />
+        <GridRow turn={ turn } />
+        <GridRow turn={ turn } />
       </table>
     </main>
   )

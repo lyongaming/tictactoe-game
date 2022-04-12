@@ -2,13 +2,13 @@ import React from 'react'
 
 import { GridSection } from './GridSection'
 
-export const GridRow = () => {
+export const GridRow = ({ turn }) => {
     return (
         <tbody>
             <tr>
-                <GridSection />
-                <GridSection />
-                <GridSection />
+                <GridSection turn={ turn } />
+                <GridSection turn={ turn } />
+                <GridSection turn={ turn } />
             </tr>
         </tbody>
     )
