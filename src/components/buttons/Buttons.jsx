@@ -9,7 +9,8 @@ export const Buttons = ({ players, setPlayers, turn, setTurn }) => {
 
   const drawGame = () => {
     // Determina the turn
-    turn = "Player 1";
+    const randTurn = Math.floor(Math.random() * 2) + 1;
+    turn = randTurn === 1 ? "Player 1" : "Player 2";
     // Set style changes accordingly
     players = players.map(player => {
       player = player.name === turn ? {
