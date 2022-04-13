@@ -13,11 +13,20 @@ export const GamePage = () => {
 
   const [players, setPlayers] = useState(playersArr);
 
+  const [matrix, setMatrix] = useState([
+    ["", "", ""],
+    ["", "", ""],
+    ["", "", ""]
+  ]);
+
   const [turn, setTurn] = useState("");
 
   return (
     <>
-        <Game players={ players } turn={ turn } />
+        <Game 
+          matrix={ matrix } changeMatrix={ setMatrix } 
+          players={ players } changePlayers={ setPlayers }
+          turn={ turn } changeTurn={ setTurn } />
 
         <PlayerAnnouncer turn={ turn } />
 
