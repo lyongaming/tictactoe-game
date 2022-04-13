@@ -30,7 +30,10 @@ export const GamePage = () => {
 
         <PlayerAnnouncer turn={ turn } />
 
-        <Buttons players={ players } setPlayers={ setPlayers } turn={ turn } setTurn={ setTurn } />
+        <Buttons 
+          players={ players } setPlayers={ setPlayers } 
+          turn={ turn } setTurn={ setTurn }
+          changeGrid={ setMatrix } />
     </>
   )
 }
