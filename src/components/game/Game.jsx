@@ -4,7 +4,7 @@ import { Player } from "./player/Player";
 import { Grid } from "./grid/Grid";
 import "./Game.css";
 
-export const Game = ({ players, turn }) => {
+export const Game = ({ players, turn, matrix, changeMatrix }) => {
   const playersArr = players.map((player) => (
     <Player key={player.name} img={player.img} score={player.score} turn={ turn } >
       {player.name}
@@ -16,7 +16,7 @@ export const Game = ({ players, turn }) => {
 
       { playersArr[0] }
 
-      <Grid turn={ turn } />
+      <Grid matrix={ matrix } changeMatrix={ changeMatrix } turn={ turn } />
 
       { playersArr[1] }
 
