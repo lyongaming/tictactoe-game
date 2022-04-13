@@ -23,7 +23,10 @@ export const GamePage = () => {
 
   return (
     <>
-        <Game matrix={ matrix } changeMatrix={ setMatrix } players={ players } turn={ turn } />
+        <Game 
+          matrix={ matrix } changeMatrix={ setMatrix } 
+          players={ players } changePlayers={ setPlayers }
+          turn={ turn } changeTurn={ setTurn } />
 
         <PlayerAnnouncer turn={ turn } />
 
