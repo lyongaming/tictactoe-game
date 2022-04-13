@@ -17,6 +17,8 @@
 
 .game__grid-table td {
     width: 33.33333%;
+    font-size: 4.5rem;
+    text-align: center;
 }
 
 .button-select {
@@ -32,4 +34,14 @@
 
 .button-sel {
     display: block;
+}
+
+.player1 {
+    cursor: default;
+    color: rgb(255, 5, 80);
+}
+
+.player2 {
+    cursor: default;
+    color: blue;
 }
