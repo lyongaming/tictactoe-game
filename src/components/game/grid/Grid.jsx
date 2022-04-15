@@ -1,26 +1,38 @@
 import React from "react";
 
-import { GridRow } from "./GridRow";
 import "./Grid.css";
+import { GridSection } from "./GridSection";
 
 export const Grid = ({ players, changePlayers, turn, changeTurn, matrix, changeMatrix }) => {
   return (
     <main className="game__grid">
       <table className="game__grid-table">
         <tbody>
-          {matrix.map((row, index) => (
-            <GridRow
-              key={index}
-              players={ players }
-              changePlayers={ changePlayers }
-              grid={matrix}
-              rowIndex={index}
-              row={row}
-              changeRow={changeMatrix}
-              turn={turn}
-              changeTurn={ changeTurn }
-            />
-          ))}
+          {
+            Array(3).fill("").map((row, rowIndex) => {
+
+              if (rowIndex === 1) rowIndex+=2;
+              if (rowIndex === 2) rowIndex+=4;
+
+              return (
+                <tr key={ rowIndex }>
+                  {
+                    Array(3).fill("").map((section, index) => (
+                      <GridSection 
+                        key={ index + rowIndex }
+                        index={ index + rowIndex }
+                        players={ players }
+                        changePlayers={ changePlayers }
+                        turn={ turn }
+                        changeTurn={ changeTurn }
+                        grid={ matrix }
+                        changeGrid={ changeMatrix } />
+                    ))
+                  }
+                </tr>
+              )
+            })
+          }
         </tbody>
       </table>
     </main>
