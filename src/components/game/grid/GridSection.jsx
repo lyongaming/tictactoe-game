@@ -1,6 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useContext, useRef } from 'react';
+import PlayerContext from '../../../context/PlayerContext';
 
-export const GridSection = ({ index, players, changePlayers, turn, changeTurn, grid, changeGrid }) => {
+export const GridSection = ({ index, turn, changeTurn, grid, changeGrid }) => {
+
+    let { players, setPlayers } = useContext(PlayerContext);
 
     const buttonEl = useRef(null);
 
@@ -12,7 +15,6 @@ export const GridSection = ({ index, players, changePlayers, turn, changeTurn, g
         const newGrid = [...grid];
         if (turn === "Player 1") {
             newGrid[index] = "X"
-            console.log(index)
             buttonEl.current.classList.add("player1");
             changeTurn("Player 2");
         } else if(turn === "Player 2") {
@@ -31,7 +33,8 @@ export const GridSection = ({ index, players, changePlayers, turn, changeTurn, g
             return player;
           });
         
-        changePlayers(players);
+        console.log(players)
+        setPlayers(players);
         buttonEl.current.disabled = true;
         changeGrid(newGrid);
     }

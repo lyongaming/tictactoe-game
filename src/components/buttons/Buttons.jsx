@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button } from "./Button";
 
 import "./Buttons.css";
 
 import toggleModal from "../../helpers/toggleModal";
+import PlayerContext from "../../context/PlayerContext";
 
-export const Buttons = ({ players, setPlayers, turn, setTurn, changeGrid }) => {
+export const Buttons = ({ turn, setTurn, changeGrid }) => {
+
+  let { players, setPlayers } = useContext(PlayerContext);
+
   const drawGame = () => {
     const randTurn = Math.floor(Math.random() * 2) + 1;
     turn = randTurn === 1 ? "Player 1" : "Player 2";

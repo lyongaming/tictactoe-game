@@ -3,7 +3,7 @@ import React from "react";
 import "./Grid.css";
 import { GridSection } from "./GridSection";
 
-export const Grid = ({ players, changePlayers, turn, changeTurn, matrix, changeMatrix }) => {
+export const Grid = ({ turn, changeTurn, matrix, changeMatrix }) => {
   return (
     <main className="game__grid">
       <table className="game__grid-table">
@@ -21,8 +21,6 @@ export const Grid = ({ players, changePlayers, turn, changeTurn, matrix, changeM
                       <GridSection 
                         key={ index + rowIndex }
                         index={ index + rowIndex }
-                        players={ players }
-                        changePlayers={ changePlayers }
                         turn={ turn }
                         changeTurn={ changeTurn }
                         grid={ matrix }

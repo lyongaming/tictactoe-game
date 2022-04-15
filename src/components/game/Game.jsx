@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { Player } from "./player/Player";
 import { Grid } from "./grid/Grid";
 import "./Game.css";
+import PlayerContext from "../../context/PlayerContext";
 
-export const Game = ({ players, changePlayers, turn, changeTurn, matrix, changeMatrix }) => {
+export const Game = ({ turn, changeTurn, matrix, changeMatrix }) => {
+
+  const { players } = useContext(PlayerContext);
+
   const playersArr = players.map((player) => (
     <Player key={player.name} img={player.img} score={player.score} turn={ turn } >
       {player.name}
@@ -17,8 +21,6 @@ export const Game = ({ players, changePlayers, turn, changeTurn, matrix, changeM
       { playersArr[0] }
 
       <Grid 
-        players={ players }
-        changePlayers={ changePlayers }
         matrix={ matrix } 
         changeMatrix={ changeMatrix } 
         turn={ turn } 
