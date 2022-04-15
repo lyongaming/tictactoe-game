@@ -1,14 +1,17 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Button } from "./Button";
 
 import "./Buttons.css";
 
 import toggleModal from "../../helpers/toggleModal";
-import PlayerContext from "../../context/PlayerContext";
 
-export const Buttons = ({ turn, setTurn, changeGrid }) => {
+import { usePlayers } from "../../hooks/usePlayers";
+import { useTurn } from "../../hooks/useTurn";
 
-  let { players, setPlayers } = useContext(PlayerContext);
+export const Buttons = ({ changeGrid }) => {
+
+  let { players, setPlayers } = usePlayers();
+  let { turn, setTurn } = useTurn();
 
   const drawGame = () => {
     const randTurn = Math.floor(Math.random() * 2) + 1;

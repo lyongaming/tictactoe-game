@@ -1,9 +1,12 @@
-import React, { useContext, useRef } from 'react';
-import PlayerContext from '../../../context/PlayerContext';
+import React, { useRef } from 'react';
+import { usePlayers } from '../../../hooks/usePlayers';
+import { useTurn } from '../../../hooks/useTurn';
 
-export const GridSection = ({ index, turn, changeTurn, grid, changeGrid }) => {
+export const GridSection = ({ index, grid, changeGrid }) => {
 
-    let { players, setPlayers } = useContext(PlayerContext);
+    let { players, setPlayers } = usePlayers();
+
+    let { turn, setTurn : changeTurn } = useTurn();
 
     const buttonEl = useRef(null);
 

@@ -1,20 +1,12 @@
 import React from 'react';
 
+import { usePlayers } from "../../../hooks/usePlayers";
+
 import "./Player.css";
 
-export const Player = ({ children: name, img, score, turn }) => {
+export const Player = ({ children: name, img, score }) => {
 
-  let playerClasses = ["game__player"];
-
-  if (turn) {
-    if (name === turn) {
-      playerClasses.filter(clas => clas === "not_turn");
-      playerClasses.push("turn");
-    } else {
-      playerClasses.filter(clas => clas === "turn");
-      playerClasses.push("not_turn");
-    }
-  }
+  const { playerClasses } = usePlayers();
 
   return (
     <aside className={ playerClasses.join(" ") }>

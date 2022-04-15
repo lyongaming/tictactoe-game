@@ -6,8 +6,11 @@ import "../buttons/Buttons.css";
 import { Button } from '../buttons/Button';
 
 import toggleModal from "../../helpers/toggleModal"
+import { useTurn } from '../../hooks/useTurn';
 
-export const PlayerAnnouncer = ({ turn }) => {
+export const PlayerAnnouncer = () => {
+
+  const { turn } = useTurn();
 
   const beginGame = () => toggleModal("0", "hidden");
 
